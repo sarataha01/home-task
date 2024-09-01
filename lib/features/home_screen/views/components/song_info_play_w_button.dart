@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:home/core/components/play_button.dart';
+import 'package:home/features/home_screen/views/components/play_button.dart';
 
-import '../constants/recent_listens_style.dart';
+import '../../../../core/constants/recent_listens_style.dart';
 import 'genre.dart';
 
 class SongInfoPlay extends StatelessWidget {
@@ -20,18 +20,24 @@ class SongInfoPlay extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Genre(
-          genre: '${index * 2 + 5}m',
-          backgroundColor: songColor,
-          songInfoColor: songBgColor,
+        Expanded(
+          child: Wrap(
+            spacing: 10,
+            runSpacing: 10,
+            children: [
+              Genre(
+                genre: '${index * 2 + 5}m',
+                backgroundColor: songColor,
+                songInfoColor: songBgColor,
+              ),
+              Genre(
+                genre: 'Morning',
+                backgroundColor: songColor,
+                songInfoColor: songBgColor,
+              ),
+            ],
+          ),
         ),
-        const SizedBox(width: 10),
-        Genre(
-          genre: 'Morning',
-          backgroundColor: songColor,
-          songInfoColor: songBgColor,
-        ),
-        const Spacer(),
         PlayButton(
           style: RecentListensStyle(
             backGroundPlayButtonColor: songColor,

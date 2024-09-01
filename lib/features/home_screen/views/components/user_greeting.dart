@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../constants/text_styles.dart';
+import '../../../../core/constants/text_styles.dart';
 
 class UserGreeting extends StatelessWidget {
   const UserGreeting({

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:home/core/components/recents_section.dart';
-import 'package:home/core/components/songs_list.dart';
-import 'package:home/core/components/top_picks.dart';
+import 'package:home/features/home_screen/views/components/recents_section.dart';
+import 'package:home/features/home_screen/views/components/songs_list.dart';
+
+import '../../../../core/constants/text_styles.dart';
 
 class HomeBodyPage extends StatelessWidget {
   const HomeBodyPage({
@@ -17,7 +18,16 @@ class HomeBodyPage extends StatelessWidget {
         children: [
           RecentsSection(),
           SizedBox(height: 30),
-          TopPicks(),
+          Row(
+            children: [
+              Expanded(
+                child: Text(
+                  'Our top picks for you 🔥',
+                  style: MyStyle.titleBold,
+                ),
+              ),
+            ],
+          ),
           SizedBox(height: 10),
           Expanded(
             child: Padding(

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:home/core/components/side_container_color.dart';
-import 'package:home/core/components/song_info_play_button.dart';
-import 'package:home/core/components/song_title.dart';
+import 'package:home/features/home_screen/views/components/side_container_color.dart';
+import 'package:home/features/home_screen/views/components/song_info_play_w_button.dart';
 
 class TopPickSongs extends StatelessWidget {
   const TopPickSongs({
@@ -35,7 +34,15 @@ class TopPickSongs extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    SongTitle(song: songs, color: songColor),
+                    Text(
+                      songs,
+                      style: TextStyle(
+                          color: songColor,
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600),
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 1,
+                    ),
                     const SizedBox(height: 20),
                     SongInfoPlay(
                       songColor: songColor,

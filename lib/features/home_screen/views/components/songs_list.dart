@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:home/core/components/top_pick_songs.dart';
+import 'package:home/features/home_screen/views/components/top_pick_songs.dart';
 
-import '../constants/song_data.dart';
+import '../../../../core/constants/song_data.dart';
 
 class SongsList extends StatelessWidget {
   const SongsList({

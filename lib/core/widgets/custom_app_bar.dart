@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:home/core/constants/colors.dart';
 
-import '../components/notification_button.dart';
-import '../components/user_greeting.dart';
+import '../../features/home_screen/views/components/notification_button.dart';
+import '../../features/home_screen/views/components/user_greeting.dart';
 import 'custom_text_field.dart';
 
 class MyAppBar extends StatelessWidget implements PreferredSizeWidget {

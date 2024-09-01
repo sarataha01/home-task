@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:home/core/components/recent_listens.dart';
+import 'package:home/features/home_screen/views/components/recent_listens.dart';
 
-import '../constants/colors.dart';
-import '../constants/recent_listens_style.dart';
-import '../constants/text_styles.dart';
+import '../../../../core/constants/colors.dart';
+import '../../../../core/constants/recent_listens_style.dart';
+import '../../../../core/constants/text_styles.dart';
 
 class RecentsSection extends StatelessWidget {
   const RecentsSection({
@@ -34,7 +34,7 @@ class RecentsSection extends StatelessWidget {
             title: 'Quiet Tranquility',
             duration: '5m',
             style: RecentListensStyle(
-              containerColor: MyColors.container2Color,
+              containerColor: Colors.red, //MyColors.container2Color,
               title: MyStyle.containerSongTitle2,
               duration: MyStyle.containerSongDuration2,
               backGroundSliderColor: MyColors.slider2Color,
